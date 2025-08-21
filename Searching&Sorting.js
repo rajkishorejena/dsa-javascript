@@ -41,8 +41,9 @@ var binarySearch = function (nums, target) {
     let middle = Math.floor((right + left) / 2);
     if (target === nums[middle]) {
       return middle;
-    } else if (target < nums[middle]) right = middle - 1;
-    else {
+    } else if (target < nums[middle]) {
+      right = middle - 1;
+    } else {
       left = middle + 1;
     }
   }
